@@ -58,9 +58,40 @@ def kopa_csv(pirmaisCSV,otraisCSV):
 
 kopa_csv("pirmais.csv","otrais.csv")
 
+import json
+
+kopa = {}
 
 #Definē funkciju, kuras argumenti ir divu json failu nosaukumi
-#Pārveido failus par vārdnīca
+def json_kopa(name1,name2):
+    file1 = open(name1,'r',encoding='utf-8')
+    file2 = open(name2,'r',encoding='utf-8')
+    a = json.load(file1)
+    b = json.load(file2)
+    kopa["Pfails"] = a
+    kopa["Ofails"] = b
+    file2.close()
+    file1.close()
+    file3 = open('rezultats.json','w',encoding='utf-8')
+    json.dump(kopa,file3,indent=4, separators=(',',':'))
+    
+    for i in b.keys():
+        if i not in a.keys():
+            print(b[i])
+  
+            
+    for i in a.keys():
+        if i not in b.keys():
+            print(a[i])
+        if i in b.keys():
+            print(a[i])
+
+
+json_kopa("JsonViens.json","JsonDivi.json")
+    
+
+#Pārveido failus par vārdnīcām
+
 
 #Abas vārdnīcas apvienot un ierakstīt rezultātu jaunā json failā
 
