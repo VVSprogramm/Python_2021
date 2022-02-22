@@ -22,14 +22,14 @@ ievad_dati = {
 with open("ievaktieDati.json","r", encoding="utf-8") as fails:
     json_data = json.load(fails)
 
-    ir_saraksta =False
+    ir_saraksta =True
     for key in json_data.keys():
         if key == vards:
             break
         if key != vards:
-            ir_saraksta = True
+            ir_saraksta = False
 
-    if ir_saraksta == False:
+    if ir_saraksta == True:
         print("Vārds ir sarakstā")
     else:
         json_data[vards]=ievad_dati
