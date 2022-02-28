@@ -1,11 +1,36 @@
 {
-    "Vārds": "Anna",
-    "Uzvārds": "Bērziņa",
-    "Vecums": "15",
-    "Telefona numurs": "29292929",
     "A": {
         "Uzvārds": "A",
         "Vecums": "A",
         "Telefona numurs": "25225"
-    }
+    },
+    "B": [
+        {
+            "Uzvārds": "v",
+            "Vecums": "25",
+            "Telefona numurs": "25252525"
+        },
+        {
+            "Uzvārds": "aaa",
+            "Vecums": "78",
+            "Telefona numurs": "65656565"
+        }
+    ],
+    "C": [
+        {
+            "Uzvārds": "ff",
+            "Vecums": "45",
+            "Telefona numurs": "25362536"
+        },
+        {
+            "Uzvārds": "gf",
+            "Vecums": "425",
+            "Telefona numurs": "25252525"
+        },
+        {
+            "Uzvārds": "f",
+            "Vecums": "59",
+            "Telefona numurs": "45789658"
+        }
+    ]
 }
