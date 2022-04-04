@@ -3,12 +3,14 @@ import sqlite3
 db = sqlite3.connect('test.db')
 
 #Tabulas izveide
-# db.execute("""CREATE TABLE IF NOT EXISTS edienkarte
-#     (id        INT     PRIMARY KEY      NOT NULL,
-#     nosaukums  TEXT    NOT NULL,
-#     cena       REAL    NOT NULL,
-#     alergeni   CHAR(50)
-#     )""")
+db.execute("""
+""")
+db.execute("""CREATE TABLE IF NOT EXISTS edienkarte
+    (id INT PRIMARY KEY NOT NULL,
+    nosaukums  TEXT    NOT NULL,
+    cena       REAL    NOT NULL,
+    alergeni   CHAR(50)
+    )""")
 
 #Datu pievienošana
 # db.execute("""INSERT INTO edienkarte
@@ -36,11 +38,11 @@ db = sqlite3.connect('test.db')
 # otra = input("Otrā sastāvdaļa: ")
 # tresa = input("Trešā sastāvdaļa: ")
 
-# #Datu ievietošana
-# db.execute("""INSERT INTO sastavdalas
-#             (pirma,otra,tresa)
-#             VALUES (:pirma,:otra,:tresa)
-# """,{'pirma':pirma,'otra':otra,'tresa':tresa})
+#Datu ievietošana
+db.execute("""INSERT INTO sastavdalas
+            (pirma,otra,tresa)
+            VALUES (:pirma,:otra,:tresa)
+""",{'pirma':pirma,'otra':otra,'tresa':tresa})
 
 # db.commit()
 
