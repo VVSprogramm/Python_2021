@@ -21,32 +21,59 @@
 
 
 
-def askint():
+# def askint():
+#     try:
+#         val = int(input("Ievadi skaitli:"))
+#     except:
+#         print("Izskatās, ka tas nav skaitlis")
+#         val = int(input("Ievadi skaitli:"))
+#     finally:
+#         print("Es te vienmēr būšu")
+#     print(val)
+
+# #askint()
+
+
+# def askint():
+#     while True:
+#         try:
+#             val = int(input("Ievadi skaitli:"))
+#         except:
+#             print("Izskatās, ka tas nav skaitlis")
+#             continue
+#         else:
+#             print("Jā, tas ir vesels skaitlis!")
+#             break
+#         finally:
+#             print("Es te vienmēr būšu")
+#         print(val)
+
+# #askint()
+
+
+
+
+#02.05.
+
+import sys
+
+saraksts = ['a',0,2]
+
+for i in saraksts:
     try:
-        val = int(input("Ievadi skaitli:"))
+        print("Skaitlis ir:",i)
+        a = 1/int(i)
+        break
     except:
-        print("Izskatās, ka tas nav skaitlis")
-        val = int(input("Ievadi skaitli:"))
-    finally:
-        print("Es te vienmēr būšu")
-    print(val)
-
-#askint()
+        print("Kļūda:",sys.exc_info()[0])
+print(a)
 
 
-def askint():
-    while True:
-        try:
-            val = int(input("Ievadi skaitli:"))
-        except:
-            print("Izskatās, ka tas nav skaitlis")
-            continue
-        else:
-            print("Jā, tas ir vesels skaitlis!")
-            break
-        finally:
-            print("Es te vienmēr būšu")
-        print(val)
-
-#askint()
-
+for i in saraksts:
+    try:
+        print("Skaitlis ir:",i)
+        a = 1/int(i)
+        break
+    except Exception as e:
+        print("Kļūda:",e.__class__)
+print(a)
